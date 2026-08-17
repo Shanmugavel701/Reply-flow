@@ -88,21 +88,43 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute -left-4 top-6 hidden items-center gap-2 rounded-xl border border-border bg-background px-3.5 py-2.5 shadow-[var(--shadow-card)] sm:flex">
-            <Moon className="size-4 text-primary" />
-            <span className="text-[13px] font-medium">While you sleep</span>
-            <span className="flex gap-1" aria-hidden="true">
-              {[0, 1, 2].map((i) => (
-                <motion.span
-                  key={i}
-                  className="size-1 rounded-full bg-primary"
-                  animate={{ opacity: [0.2, 1, 0.2] }}
-                  transition={{ duration: 2.2, repeat: Infinity, delay: i * 0.4 }}
-                />
-              ))}
-            </span>
-          </div>
+        <div className="relative flex justify-center pt-24 lg:justify-end lg:pt-0">
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="pointer-events-none absolute left-2 top-0 z-10 select-none sm:left-4 lg:-left-6 lg:top-4"
+          >
+            <p className="font-[family-name:var(--font-hand)] text-[26px] font-bold leading-[1.05] text-foreground sm:text-[30px] lg:text-[34px]">
+              it replies while
+              <br />
+              you sleep{" "}
+              <span className="align-middle text-[24px] lg:text-[30px]" aria-hidden="true">
+                😴
+              </span>
+            </p>
+            <svg
+              className="mt-1 h-14 w-28 text-foreground/80 sm:w-32 lg:h-16 lg:w-36"
+              viewBox="0 0 140 70"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4C10 34 40 58 118 58"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+              <path
+                d="M104 48L120 58L104 66"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.div>
+
 
           <div className="float-slow">
             <PhoneFrame
