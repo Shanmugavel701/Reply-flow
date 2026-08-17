@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { Check, Moon, PlayCircle, Sparkles } from "lucide-react";
+import { Check, PlayCircle, Sparkles } from "lucide-react";
 import { brand } from "@/config/brand";
 import { Bubble, ChatHeader, PhoneFrame, TypingBubble } from "./PhoneMock";
 
