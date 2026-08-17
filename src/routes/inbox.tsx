@@ -85,7 +85,7 @@ const quickReplies = [
 ];
 
 function InboxPage() {
-  const [activeId, setActiveId] = useState(conversations[0].id);
+  const [activeId, setActiveId] = useState(conversations[0]!.id);
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
   const [channel, setChannel] = useState<Channel | "all">("all");
   const [query, setQuery] = useState("");
